@@ -10,5 +10,26 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+
+// Add event listener to button and storing user input in variables via prompts
+generateBtn.addEventListener("click", promptMe);
+
+function promptMe() {
+  let passwordLength = prompt("What is the length of your password?");
+  if ((passwordLength < 8) || (passwordLength > 128));
+    passwordLength = prompt("Please enter a valid length for the password with at least 8 characters and no more than 128 characters.");
+  return passwordLength;
+
+    // const passwordLength = prompt("What is the length of your password?");
+    // switch (passwordLength) {
+    //   case case1;
+    //     passwordLength = prompt("Please enter a valid length for the password with at least 8 characters and no more than 128 characters.");
+    //     break;
+    //   case case2;
+    //     passwordLength = prompt("Please enter a valid length for the password with at least 8 characters and no more than 128 characters.");
+    //     break;
+    //   default:
+    //     return passwordLength;
+    
+    } 
+
