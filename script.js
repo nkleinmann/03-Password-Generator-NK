@@ -22,7 +22,7 @@ function promptMe() {
   if ((passwordLength < 8) || (passwordLength > 128)) {
     alert("Please enter a valid length for the password with at least 8 characters and no more then 128 characters.");
   }
-  if (isNaN(passwordLength)) {
+  else if (isNaN(passwordLength)) {
     alert("Please enter a valid numerical length for the password with at least 8 characters and no more than 128 characters.")
   }
   return passwordLength;
