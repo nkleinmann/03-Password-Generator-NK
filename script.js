@@ -33,6 +33,7 @@ function writePassword() {
     lowerCase();
     upperCase();
     numberCase();
+    specialCase();
   });
 
 
@@ -52,7 +53,7 @@ function pwLength() {
   return passwordLength;
     } 
 
-
+// Adds lower case letters to array if selected
 function lowerCase() {
   let lCase = confirm("Do you want lower case letters in your password?");
   if (lCase === true) {
@@ -61,6 +62,7 @@ function lowerCase() {
   }
 }
 
+// Adds upper case letters to array if selected
 function upperCase() {
  let uCase = confirm("Do you want upper case letters in your password?");
  if (uCase === true) {
@@ -69,10 +71,20 @@ function upperCase() {
  } 
 }
 
+// Adds numbers to array if selected
 function numberCase() {
-  let numCase = confirm("Do you want upper case letters in your password?");
+  let numCase = confirm("Do you want numbers in your password?");
   if (numCase === true) {
     passArray = passArray.concat(numArr);
+    console.log(passArray);
+  } 
+ }
+
+ // Adds special characters to array if selected
+ function specialCase() {
+  let spCase = confirm("Do you want special characters in your password?");
+  if (spCase === true) {
+    passArray = passArray.concat(speCharArr);
     console.log(passArray);
   } 
  }
