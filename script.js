@@ -12,6 +12,7 @@ const numArr = num.split("");
 const speChar = "!#$%&'()*+,'()*+,-./:;<=>?@[\]^_`{|}~"
 const speCharArr = speChar.split("");
 // console.log(speCharArr);
+let passArray = [];
 
 let letters = " "
 let passwd = []
@@ -26,17 +27,20 @@ function writePassword() {
 }
 
 
-// Add event listener to button and storing user input in variables via prompts
-generateBtn.addEventListener("click", function() {
-  pwLength();
-  lowerCase();
-});
+ // Add event listener to button and storing user input in variables via prompts
+ generateBtn.addEventListener("click", function() {
+    pwLength();
+    lowerCase();
+    upperCase();
+    numberCase();
+  });
 
 
 
 
 // Function prompts user for length of password and alerts if password length is outside of restraints
 function pwLength() {
+  //password length
   let passwordLength = prompt("What is the length of your password?");
   if ((passwordLength < 8) || (passwordLength > 128)) {
     alert("Please enter a valid length for the password with at least 8 characters and no more then 128 characters.");
@@ -48,14 +52,29 @@ function pwLength() {
   return passwordLength;
     } 
 
-// function lowerCase() {
-//   lCase = confirm("Do you want lower case letters in your password?");
-//   if (lCase === true) {
-//     const l = range(97, 122);
-//     String.fromCharCode(l);
-//     let lLetters = letters.split(" ");
-//     console.log(lLetters);
-//   }
 
-// }
+function lowerCase() {
+  let lCase = confirm("Do you want lower case letters in your password?");
+  if (lCase === true) {
+    passArray = passArray.concat(lowerArr)
+    console.log(passArray);
+  }
+}
+
+function upperCase() {
+ let uCase = confirm("Do you want upper case letters in your password?");
+ if (uCase === true) {
+   passArray = passArray.concat(upperArr);
+   console.log(passArray);
+ } 
+}
+
+function numberCase() {
+  let numCase = confirm("Do you want upper case letters in your password?");
+  if (numCase === true) {
+    passArray = passArray.concat(numArr);
+    console.log(passArray);
+  } 
+ }
+
 
