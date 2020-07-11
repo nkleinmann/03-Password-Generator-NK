@@ -25,7 +25,6 @@ let passwd = []
  // Add event listener to button and storing user input in variables via prompts
  generateBtn.addEventListener("click", function() {
     passwordDecisions();
-    // writePassword();
   });
 
 
@@ -82,6 +81,7 @@ function passwordDecisions() {
   // console.log(finalPassword)
   
   // Write password to the #password input
-  const passwordText = document.querySelector("#password");
+  let passwordText = document.querySelector("#password");
   passwordText.value = finalPassword;
 }
+
