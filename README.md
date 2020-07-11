@@ -9,9 +9,11 @@ Parts of Website:
 4. User chooses if they want upper case letters
 5. User chooses if they want numbers
 6. User chooses if they want special characters
+7. Random password is generated and displayed 
 
-Challenges: This was my first larger project using JavaScript.  I learned a lot in debugging and researching (Google-fu), specifically on how to use randomization in JavaScript and global and local scopes.  I started with adding an event listener and making sure the first prompt worked as I wanted it to.  Then I worked on storing responses from other prompts and creating arrays which would later be used to create the larger array to choose random characters from for the password.  Console logs helped me when a part of my program was not working as expected, such as when my password was not resetting when a user tries to generate a second password.
+Challenges: This was my first larger project using JavaScript.  I learned a lot in debugging and researching (Google-fu), specifically on how to use randomization in JavaScript and global and local scopes.  I started with adding an event listener and making sure the first prompt worked as I wanted it to.  Then I worked on storing responses from other prompts and creating arrays, which would later be used to create the larger array to choose random characters from for the password.  Console logs helped me when a part of my program was not working as expected, such as when my password was not resetting when a user tries to generate a second password.
 
-Here is the link to my application:
+Here is the link to my application: [Visit my website!] ()
 
 Screenshot of Website:
+<img width="1046" alt="Screen Shot 2020-07-11 at 3 04 22 PM" src="https://user-images.githubusercontent.com/65608809/87231763-e9e01700-c387-11ea-9f32-ee58aa0294ee.png">
