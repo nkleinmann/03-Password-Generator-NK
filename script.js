@@ -1,38 +1,38 @@
 // Assignment Code
 const generateBtn = document.querySelector("#generate");
-const lower = "abcdefghijklmnopqrstuvwxyz";
-const lowerArr = lower.split("");
-// console.log(lowerArr);
-const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const upperArr = upper.split("");
-// console.log(upperArr);
-const num = "0123456789";
-const numArr = num.split("");
-// console.log(numArr);
-const speChar = "!#$%&'()*+,'()*+,-./:;<=>?@[\]^_`{|}~"
-const speCharArr = speChar.split("");
-// console.log(speCharArr);
-let passArray = [];
-let finalPassword = " "
-
-
-
-
-// let letters = " "
-let passwd = []
-
 
  // Add event listener to button and storing user input in variables via prompts
  generateBtn.addEventListener("click", function() {
-    passwordDecisions();
+  passwordDecisions();
   });
-
-
-
 
 // Function prompts user for length of password and alerts if password length is outside of restraints
 function passwordDecisions() {
+
+  // Assignment Code for strings and arrays
+  let passwd = [];
+  let passArray = [];
+  const lower = "abcdefghijklmnopqrstuvwxyz";
+  const lowerArr = lower.split("");
+// console.log(lowerArr);
+  const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const upperArr = upper.split("");
+// console.log(upperArr);
+  const num = "0123456789";
+  const numArr = num.split("");
+// console.log(numArr);
+  const speChar = "!#$%&'()*+,'()*+,-./:;<=>?@[\]^_`{|}~"
+  const speCharArr = speChar.split("");
+// console.log(speCharArr);
+// let passArray = [];
+// let finalPassword = " ";
   // password length
+
+  let finalPassword = "";
+
+  let passwordText = document.querySelector("#password");
+  passwordText.value = finalPassword;
+
   let passwordLength = prompt("What is the length of your password?");
   if ((passwordLength < 8) || (passwordLength > 128)) {
     alert("Please enter a valid length for the password with at least 8 characters and no more then 128 characters.");
@@ -77,11 +77,11 @@ function passwordDecisions() {
     const specialNum = Math.ceil(Math.random()*passwordArrayLength);
     passwd.push(passArray[specialNum]);
   }
-  let finalPassword = passwd.join('');
+  finalPassword = passwd.join('');
   // console.log(finalPassword)
   
   // Write password to the #password input
-  let passwordText = document.querySelector("#password");
+  // let passwordText = document.querySelector("#password");
   passwordText.value = finalPassword;
 }
 
