@@ -70,7 +70,7 @@ function passwordDecisions() {
   if ((lCase === false) && (uCase === false) && (numCase === false) && (spCase === false)) {
       alert("Please chose at least one of the options for your password.");
     }
-    console.log(passArray)
+    // console.log(passArray)
     // for loop to create a random password with the correct length and options
   const passwordArrayLength = passArray.length;
   for (let i = 0; i < passwordLength; i++) {
