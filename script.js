@@ -78,8 +78,8 @@ function passwordDecisions() {
     // for loop to create a random password with the correct length and options
   const passwordArrayLength = passArray.length;
   for (let i = 0; i < passwordLength; i++) {
-    // Rounds number up to a whold number, * passwordLength gives me the password length amount of random whole numbers
-    const specialNum = Math.ceil(Math.random()*passwordArrayLength);
+    // Rounds number up to a whold number, * passwordArrayLength gives me the password array length amount of random whole numbers
+    let specialNum = Math.ceil(Math.random()*passwordArrayLength);
     passwd.push(passArray[specialNum]);
   }
   finalPassword = passwd.join('');
